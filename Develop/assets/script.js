@@ -23,7 +23,6 @@ function writePassword() {
 
 function generatePassword() {
   var passwordLength = document.getElementById("pw-length").value
-  console.log(passwordLength)
 
   // Fail States
   if (lowerCase.checked == false &&
@@ -42,11 +41,40 @@ function generatePassword() {
   let lowerChars = "abcdefghijklmnopqrstuvwxyz"
   let upperChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
   let nums = "1234567890"
-  let syms = "!@#$%^&*()_-=+|]}{[':;.><,/?"
+  let syms = "!@#$%^&*()"
 
-  if () {
-    charSet = charSet + lowerChars
+  if (lowerCase.checked) {
+    charSet = charSet += lowerChars
+  } 
+
+  if (upperCase.checked) {
+    charSet = charSet += upperChars
   }
+
+  if (numbers.checked) {
+    charSet = charSet += nums
+  }
+
+  if (symbols.checked) {
+    charSet = charSet += syms
+  }
+
+  console.log(charSet)
+  charSet = charSet.split("")
+  console.log(charSet)
+
+  // Choose random password
+  let password = ""
+  for (i = 0; i < passwordLength; i++) {
+    pwLength = Math.floor(Math.random() * charSet.length)
+
+    password = password += charSet[pwLength]
+  }
+
+  toString(password)
+
+  console.log(password)
+  return password;
 };
 
 // Add event listener to generate button
