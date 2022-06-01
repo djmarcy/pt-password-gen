@@ -10,11 +10,11 @@ Fully-functional password generator that includes:
 
 ## Visuals
 
-![Password Generator (Live)](.\assets\imgs\password-generator.png)
+[Password Generator in action](https://drive.google.com/file/d/1myA8kgXgwICfVTTbS3bogsupSubW4PRK/view)
 
 ## Installation
 
-Download to single directory & run index.html.
+Download to single directory & run index.html, or use via GitHub Pages.
 
 ## License
 
